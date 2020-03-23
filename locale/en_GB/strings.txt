@@ -4038,4 +4038,12 @@ $TLS_on_design = 'On Design';
 $TLS_on_exec = 'On Execution';
 $TLS_note_platform_filter = 'Test Cases are filtered by following platforms';
 $TLS_testers_qty = 'Number of testers';
-// ----- END ------------------------------------------------------------------
+
+$TLS_report_test_automation = 'Report Test Automation Spec';
+$TLS_btn_report_test_automation = 'Report Test Automation Spec';
+$TLS_before_summary = "Before summary";
+$TLS_before_preconditions = "Before Preconditions";
+$TLS_after_title = "After Title";
+$TLS_after_summary = "After summary";
+$TLS_after_preconditions = "After Preconditions";
+// ----- END -----------------------------------------------------

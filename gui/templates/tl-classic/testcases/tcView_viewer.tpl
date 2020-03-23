@@ -218,17 +218,19 @@ viewer for test case in test specification
     {* START TCV SECTION *}
     <fieldset class="groupBtn">
     	<b>{$tcView_viewer_labels.testcase_version_operations}</b>
-      <form style="display: inline;" id="versionControls" 
+      <form style="display: inline;" 
         name="versionControls" method="post" 
         action="{$basehref}lib/testcases/tcEdit.php">
       	<input type="hidden" name="testcase_id" 
-               id="versionControls_testcase_id" value="{$args_testcase.testcase_id}" />
-      	<input type="hidden" name="tcversion_id" value="{$args_testcase.id}" />
+               value="{$args_testcase.testcase_id}" />
+      	<input type="hidden" name="tcversion_id"
+               value="{$args_testcase.id}" />
 
-        <input type="hidden" name="tplan_id" value="{$gui->tplan_id}" />
+        <input type="hidden" name="tplan_id"
+               value="{$gui->tplan_id}" />
 
       	<input type="hidden" name="has_been_executed"
-          value="{$has_been_executed}" />
+               value="{$has_been_executed}" />
       	<input type="hidden" name="doAction" value="" />
       	<input type="hidden" name="show_mode" value="{$gui->show_mode}" />
 
@@ -406,6 +408,7 @@ viewer for test case in test specification
   <input type="hidden" id="stepsControls_tplan_id" name="tplan_id" 
          value="{$gui->tplan_id}" />
 
+  <div class="workBack">
     {include file="{$tplConfig.inc_tcbody}" 
              inc_tcbody_close_table=false
              inc_tcbody_testcase=$args_testcase
@@ -416,38 +419,38 @@ viewer for test case in test specification
              inc_tcbody_updater_userinfo=$updater_userinfo
              inc_tcbody_editor_type=$gui->designEditorType
              inc_tcbody_cf=$args_cf}
-    
-  {if $args_testcase.steps != ''}
-    {include file="{$tplConfig.inc_steps}"
-             layout=$gui->steps_results_layout
-             edit_enabled=$edit_enabled
-  		       args_frozen_version=$args_frozen_version
-             ghost_control=true
-             steps=$args_testcase.steps}
-  {/if}
-</table>
+    {if $args_testcase.steps != ''}
+      {include file="{$tplConfig.inc_steps}"
+               layout=$gui->steps_results_layout
+               edit_enabled=$edit_enabled
+    		       args_frozen_version=$args_frozen_version
+               ghost_control=true
+               steps=$args_testcase.steps}
+    {/if}
 
-  {if $edit_enabled && $args_frozen_version=="no"}
-    <div {$addInfoDivStyle}>
-      <input type="submit" name="create_step" 
-              onclick="doAction.value='createStep';{$gui->submitCode}" value="{$tcView_viewer_labels.btn_create_step}" />
+    {if $edit_enabled && $args_frozen_version=="no"}
+      <div {$addInfoDivStyle}>
+        <input type="submit" name="create_step" 
+                onclick="doAction.value='createStep';{$gui->submitCode}" value="{$tcView_viewer_labels.btn_create_step}" />
 
-      {if $args_testcase.steps != ''}
-        <input type="submit" name="resequence_steps" id="resequence_steps" 
-                onclick="doAction.value='doResequenceSteps';{$gui->submitCode}" 
-                value="{$tcView_viewer_labels.btn_resequence_steps}" />
-      {/if}
+        {if $args_testcase.steps != ''}
+          <input type="submit" name="resequence_steps" id="resequence_steps" 
+                  onclick="doAction.value='doResequenceSteps';{$gui->submitCode}" 
+                  value="{$tcView_viewer_labels.btn_resequence_steps}" />
+        {/if}
 
-      <span class="order_info" style='display:none'>
-      <input type="submit" name="renumber_step" 
-              onclick="doAction.value='doReorderSteps';{$gui->submitCode};javascript: return validateStepsReorder('step_number{$args_testcase.id}');"
-              value="{$tcView_viewer_labels.btn_reorder_steps}" />
-      </span>
-    </div>
-  {/if}
+        <span class="order_info" style='display:none'>
+        <input type="submit" name="renumber_step" 
+                onclick="doAction.value='doReorderSteps';{$gui->submitCode};javascript: return validateStepsReorder('step_number{$args_testcase.id}');"
+                value="{$tcView_viewer_labels.btn_reorder_steps}" />
+        </span>
+      </div>
+    {/if}
+  </div>
 </form>
 
-{include file="{$tplConfig['attributesLinearForViewer.inc']}"} 
+<div class="workBack">
+  {include file="{$tplConfig['attributesLinearForViewer.inc']}"} 
 
 {if $args_cf.standard_location neq ''}
   <div {$addInfoDivStyle}>
@@ -590,6 +593,8 @@ viewer for test case in test specification
   {include file="{$tplConfig['quickexec.inc']}"
            args_edit_enabled=$edit_enabled} 
 {/if}
+
+</div>
 
 {if $gui->closeMyWindow }
   <script type="text/javascript">

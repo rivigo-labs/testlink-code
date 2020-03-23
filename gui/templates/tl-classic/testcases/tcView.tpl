@@ -19,6 +19,39 @@ Purpose: smarty template - view test case in test specification
 {$deleteStepAction = "$deleteStepAction&tplan_id=$tplanID&step_id="}
 
 {include file="inc_head.tpl" openHead='yes'}
+
+<style>
+.mainAttrContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryCONTAINER {
+  padding: 5px 3px 4px 5px;
+  order: {$tlCfg->testcase_cfg->viewerFieldsOrder->summary};
+}
+
+.spaceOne {
+  padding: 5px 3px 4px 5px;
+  order: {$tlCfg->testcase_cfg->viewerFieldsOrder->spaceOne};
+}
+
+.preconditionsCONTAINER {
+  padding: 5px 3px 4px 5px;
+  order: {$tlCfg->testcase_cfg->viewerFieldsOrder->preconditions};  
+}
+
+.CFBeforeStepsCONTAINER {
+  padding: 5px 3px 4px 5px;
+  order: 99;  
+}
+
+</style>
+
+
+
+
+
 <script language="JavaScript" src="gui/javascript/expandAndCollapseFunctions.js" type="text/javascript"></script>
 {include file="inc_del_onclick.tpl"}
 
@@ -176,11 +209,13 @@ function jsCallDeleteFile(btn, text, o_id) {
       {$loadOnCancelURL=""}
     {/if} 
 
+  <div class="workBack">
   {include file="attachments.inc.tpl" 
            attach_attachmentInfos=$gui->attachments[$tcVersionID]  
            attach_downloadOnly=$bDownloadOnly
            attach_uploadURL={$gui->fileUploadURL[$tcVersionID]}
            attach_loadOnCancelURL=$gui->loadOnCancelURL}
+  </div>
   
   {* Other Versions *}
   {if 'editOnExec' != $gui->show_mode && 
