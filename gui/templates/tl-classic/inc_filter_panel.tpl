@@ -81,7 +81,7 @@
     <div id="settings" class="x-panel-body" style="padding-top: 3px;overflow: visible;">
       <input type='hidden' id="tpn_view_settings" name="tpn_view_status"  value="0" />
 
-      <table class="smallGrey" style="width:98%;overflow: visible;">
+      <table class="smallGrey" style="width:96%;overflow: visible;margin: 0 10px 10px 10px;padding: 4px">
 
       {if $control->settings.setting_testplan}
         <tr>
@@ -167,10 +167,6 @@
             </td>
           </tr>
       {/if}
-
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
 
       {if $control->settings.setting_exec_tree_counters_logic}
         <tr>
