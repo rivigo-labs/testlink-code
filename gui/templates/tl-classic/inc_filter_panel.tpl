@@ -170,15 +170,19 @@
 
       {if $control->settings.setting_exec_tree_counters_logic}
         <tr>
-          <td>
-          {$labels.exec_tree_counters_logic}
-          </td>
-          <td>
-            <select class="chosen-select" name="setting_exec_tree_counters_logic" onchange="this.form.submit()">
-            {html_options 
-              options=$control->settings.setting_exec_tree_counters_logic.items
-              selected=$control->settings.setting_exec_tree_counters_logic.selected}
-            </select>
+          <td colspan="2">
+            <div style="margin-top: 4px;">
+              <span style="margin-right: 2px;vertical-align: middle;">
+                {$labels.exec_tree_counters_logic}
+              </span>
+              <span>
+                <select class="chosen-select" name="setting_exec_tree_counters_logic" onchange="this.form.submit()">
+                  {html_options
+                  options=$control->settings.setting_exec_tree_counters_logic.items
+                  selected=$control->settings.setting_exec_tree_counters_logic.selected}
+                </select>
+              </span>
+            </div>
           </td>
         </tr>   
       {/if}
@@ -541,18 +545,23 @@
 
       {if $control->settings.setting_refresh_tree_on_action}
         <tr>
-            <td>{$labels.do_auto_update}</td>
-            <td>
-               <input type="hidden" 
-                      id="hidden_setting_refresh_tree_on_action"
-                      name="hidden_setting_refresh_tree_on_action" 
-                      value="{$control->settings.setting_refresh_tree_on_action.hidden_setting_refresh_tree_on_action}" />
-
-               <input type="checkbox"
-                       id="cbsetting_refresh_tree_on_action"
-                       name="setting_refresh_tree_on_action"
+            <td colspan="2">
+              <div style="margin-top: 4px">
+                <span style="padding-right: 10px">
+                  {$labels.do_auto_update}
+                </span>
+                <span>
+                  <input type="hidden"
+                         id="hidden_setting_refresh_tree_on_action"
+                         name="hidden_setting_refresh_tree_on_action"
+                         value="{$control->settings.setting_refresh_tree_on_action.hidden_setting_refresh_tree_on_action}" />
+                  <input type="checkbox"
+                      id="cbsetting_refresh_tree_on_action"
+                      name="setting_refresh_tree_on_action"
                        {if $control->settings.setting_refresh_tree_on_action.selected} checked {/if}
                        style="font-size: 90%;" onclick="this.form.submit();" />
+                </span>
+              </div>
             </td>
           </tr>
       {/if}
@@ -760,7 +769,7 @@
 <script>
 /* Chosen Config */
 jQuery( document ).ready(function() {
-jQuery(".chosen-select").chosen({ width: "75%" , allow_single_deselect: true, search_contains: true});
+jQuery('[name="setting_exec_tree_counters_logic"]').chosen({ width: "47%" , allow_single_deselect: true, search_contains: true});
 jQuery('select[data-cfield="list"]').chosen({ width: "75%" , allow_single_deselect: true, search_contains: true});
 });
 </script>

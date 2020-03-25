@@ -312,6 +312,11 @@ input[type="radio"] {
 	margin: 4px 4px 0 4px;
 }
 
+input[type="image"] {
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
 /* Reset to flat background */
 input[type="password"],
 input[type="text"],
