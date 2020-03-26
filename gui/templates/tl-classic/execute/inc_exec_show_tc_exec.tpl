@@ -44,7 +44,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 
 		<div id="{$div_id}" name="{$div_id}" class="exec_additional_info">
       <br />
-      <div class="exec_testsuite_details" style="width:95%;">
+      <div class="exec_testsuite_details" style="width:99%;">
       <span class="legend_container">{$labels.details}</span><br />
 		  {if $gui->testDesignEditorType == 'none'}{$tsuite_info[$tc_id].details|nl2br}{else}{$tsuite_info[$tc_id].details}{/if}
 		  </div>
@@ -235,7 +235,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 
        <th style="text-align:left">&nbsp;</th>
 
-       {$my_colspan=$my_colspan+2}
+       {$my_colspan=$my_colspan+3}
   		 </tr>
 
 			{* ----------------------------------------------------------------------------------- *}

@@ -97,7 +97,7 @@ define('TL_ABS_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 $tlCfg->testlinkdotorg = 'http://www.testlink.org';
 
 /** GUI themes (base for CSS and images)- modify if you create own one */
-$tlCfg->theme_dir = 'gui/themes/default/';
+$tlCfg->theme_dir = 'gui/themes/default_fixed/';
 
 /** Dir for compiled templates */
 $tlCfg->temp_dir = TL_ABS_PATH . 'gui' . DIRECTORY_SEPARATOR . 
@@ -308,7 +308,7 @@ $tlCfg->smarty_debug = false;
  *  for security reasons (see http://itsecuritysolutions.org/2012-08-13-TestLink-1.9.3-multiple-vulnerabilities/)
  *  put it out of reach via web or configure access denied.
  */
-$tlCfg->log_path = '/var/testlink/logs/'; /* unix example */
+$tlCfg->log_path = '/var/log/testlink/'; /* unix example */
 if (($lp = getenv('TESTLINK_LOG_PATH'))) {
   $tlCfg->log_path = trim($lp);
 }
@@ -321,7 +321,7 @@ if (($lp = getenv('TESTLINK_LOG_PATH'))) {
  *         user will receive a message on screen. (default)
  * 'SILENT': same that FILE, but user will not receive message on screen.
  */
-$tlCfg->config_check_warning_mode = 'FILE';
+$tlCfg->config_check_warning_mode = 'SILENT';
 
 /**
  * ONCE_FOR_SESSION
@@ -831,8 +831,8 @@ $tlCfg->gui->text_editor['steps_design'] = array('type' => 'ckeditor','toolbar' 
                                                  'height' => 100);
 
 $tlCfg->gui->text_editor['execution'] = array( 'type' => 'none');
-$tlCfg->gui->text_editor['edit_execution'] = array( 'type' => 'none', 'cols' => 80, 'rows' => 20);
-$tlCfg->gui->text_editor['display_execution_notes'] = array('type' => 'none', 'cols' => 80, 'rows' => 20);
+$tlCfg->gui->text_editor['edit_execution'] = array( 'type' => 'none', 'cols' => 80, 'rows' => 10);
+$tlCfg->gui->text_editor['display_execution_notes'] = array('type' => 'none', 'cols' => 80, 'rows' => 10);
 
 /** User can choose order of menu areas */
 $tlCfg->gui->layoutMainPageLeft = array( 'testProject' => 1, 'userAdministration' => 2 ,
@@ -1543,7 +1543,7 @@ $g_repositoryType = TL_REPOSITORY_TYPE_FS;
  * Put it out of reach via web or configure access denied.
  *
  **/
-$g_repositoryPath = '/var/testlink/upload_area/';  /* unix example */
+$g_repositoryPath = '/var/www/testlink/upload_area/';  /* unix example */
 if (($upa = getenv('TESTLINK_UPLOAD_AREA'))) {
   $g_repositoryPath = trim($upa);
 }
@@ -1557,7 +1557,7 @@ $g_repositoryCompressionType = TL_REPOSITORY_COMPRESSIONTYPE_NONE;
 
 // the maximum allowed file size for each repository entry, default 1MB.
 // Also check your PHP settings (default is usually 2MBs)
-$tlCfg->repository_max_filesize = 1; //MB
+$tlCfg->repository_max_filesize = 10; //MB
 
 
 
@@ -1906,10 +1906,10 @@ $tlCfg->tplanDesign->hideTestCaseWithStatusIn = array($tlCfg->testCaseStatus['ob
 /** Maximum uploadfile size to importing stuff in TL */
 // Also check your PHP settings (default is usually 2MBs)
 // unit BYTES is required by MAX_FILE_SIZE HTML option
-$tlCfg->import_file_max_size_bytes = '409600';
+$tlCfg->import_file_max_size_bytes = '40960000';
 
 /** Maximum line size of the imported file */
-$tlCfg->import_max_row = '10000'; // in chars
+$tlCfg->import_max_row = '100000'; // in chars
 
 /** Set the default role used for new users */
 // - created from the login page.

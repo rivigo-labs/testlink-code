@@ -58,7 +58,7 @@
 
 <div class="vertical_menu" style="float: right; margin:0px 0px 10px 10px;width: 320px;">
 	{if $gui->num_active_tplans > 0}
-	  <div class="" style="padding: 3px 15px;">
+	  <div class="" style="padding: 3px 15px 0 10px">
      {lang_get s='help' var='common_prefix'}
      {lang_get s='test_plan' var="xx_alt"}
      {$text_hint="$common_prefix: $xx_alt"}
@@ -198,6 +198,6 @@
 </div>
 <script>
 jQuery( document ).ready(function() {
-jQuery(".chosen-select").chosen({ width: "85%" });
+jQuery(".chosen-select").chosen({ width: "100%" });
 });
 </script>

@@ -9,7 +9,7 @@ smarty template - used to show execution notes on execution feature
 <body>
 {if $webeditorType == 'none'}
 <textarea {$readonly} name="notes" cols="{$webeditorCfg.cols}" 
-          rows="{$webeditorCfg.rows}" style="background:transparent;">
+          rows="{$webeditorCfg.rows}" style="background:transparent;width: 100%;">
 {$notes|escape}
 </textarea>
 {else}
