@@ -617,8 +617,8 @@ table.link_and_exec th {
 table.exec_history {
 	border: 		thin solid black;
 	font-size:		90%;
-	margin:			20px;
-	width:			95%;
+	margin:			2px;
+	width:			99%;
 }
 
 table.exec_history th {
@@ -804,7 +804,7 @@ img.arrow {
 
 div.exec_history {
 	background:		#FFF;
-	padding: 		0px 3px;
+	padding: 		0px 5px 10px 5px;
 }
 
 span.type1 {
@@ -977,7 +977,7 @@ div.login_form.medium {
 	color: 			black;
 	margin-bottom:	10px;
 	padding-left:	10px;
-	padding-bottom:	10px;
+	padding-bottom:	4px;
 }
 
 .exec_testsuite_details {
