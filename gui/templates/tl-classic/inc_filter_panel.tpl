@@ -86,7 +86,7 @@
       {if $control->settings.setting_testplan}
         <tr>
           <td style="min-width: 85px">{$labels.test_plan}</td>
-          <td style="max-width: 303px;min-width: 303px;">
+          <td style="max-width: 264px;min-width: 264px;">
             <select class="chosen-select" name="setting_testplan" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_testplan.items
                           selected=$control->settings.setting_testplan.selected}
@@ -99,7 +99,7 @@
         {$platformID=$control->settings.setting_platform.selected}
         <tr>
           <td>{$labels.platform}</td>
-          <td style="max-width: 303px;min-width: 303px;">
+          <td style="max-width: 264px;min-width: 264px;">
             <select name="setting_platform" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_platform.items
                           selected=$control->settings.setting_platform.selected}
@@ -111,7 +111,7 @@
       {if $control->settings.setting_build}
         <tr>
           <td>{$control->settings.setting_build.label}</td>
-          <td style="max-width: 303px;min-width: 303px;">
+          <td style="max-width: 264px;min-width: 264px;">
             <select name="setting_build" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_build.items
                           selected=$control->settings.setting_build.selected}
@@ -123,7 +123,7 @@
       {if $control->settings.setting_testsgroupby}
         <tr>
           <td>{$labels.test_grouped_by}</td>
-          <td style="max-width: 303px;min-width: 303px;">
+          <td style="max-width: 264px;min-width: 264px;">
             <select name="setting_testsgroupby" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_testsgroupby.items
                     selected=$control->settings.setting_testsgroupby.selected}
@@ -178,7 +178,7 @@
           <td>
                 {$labels.exec_tree_counters_logic}
           </td>
-              <td style="max-width: 303px;min-width: 303px;">
+              <td style="max-width: 264px;min-width: 264px;">
                 <select class="chosen-select" name="setting_exec_tree_counters_logic" onchange="this.form.submit()">
                   {html_options
                   options=$control->settings.setting_exec_tree_counters_logic.items
@@ -262,7 +262,7 @@
     {if $control->filters.filter_toplevel_testsuite}
       <tr>
           <td>{$labels.testsuite}</td>
-          <td style="max-width: 294px;min-width: 294px;">
+          <td style="max-width: 264px;min-width: 264px;">
             <select class="chosen-select" name="filter_toplevel_testsuite">
               {html_options options=$control->filters.filter_toplevel_testsuite.items
                             selected=$control->filters.filter_toplevel_testsuite.selected}
@@ -274,7 +274,7 @@
     {if $control->filters.filter_keywords}
       <tr>
         <td>{$labels.keyword}</td>
-        <td style="max-width: 294px;min-width: 294px;"><select class="chosen-select" name="filter_keywords[]"
+        <td style="max-width: 264px;min-width: 264px;"><select class="chosen-select" name="filter_keywords[]"
                     title="{$labels.keywords_filter_help}"
                     multiple="multiple"
                     size="{$control->filters.filter_keywords.size}">
@@ -294,7 +294,7 @@
     {if $control->filters.filter_platforms}
       <tr>
         <td>{$labels.platforms}</td>
-        <td style="max-width: 294px;min-width: 294px;"><select class="chosen-select" name="filter_platforms[]"
+        <td style="max-width: 264px;min-width: 264px;"><select class="chosen-select" name="filter_platforms[]"
                     title=""
                     multiple="multiple"
                     size="{$control->filters.filter_platforms.size}">
@@ -323,7 +323,7 @@
     {if $control->filters.filter_workflow_status}
       <tr>
         <td>{$labels.status}</td>
-        <td style="max-width: 294px;min-width: 294px;">
+        <td style="max-width: 264px;min-width: 264px;">
           <select class="chosen-select" id="filter_workflow_status" 
           {if $control->advanced_filter_mode}
              name="filter_workflow_status[]" multiple="multiple"
@@ -341,7 +341,7 @@
     {if $control->filters.filter_importance}
       <tr>
         <td>{$labels.importance}</td>
-        <td style="max-width: 294px;min-width: 294px;">
+        <td style="max-width: 264px;min-width: 264px;">
           <select class="chosen-select" id="filter_importance"
           {if $control->advanced_filter_mode}
              name="filter_importance[]" multiple="multiple"
@@ -359,7 +359,7 @@
     {if $control->filters.filter_priority}
       <tr>
         <td>{$labels.priority}</td>
-        <td style="max-width: 294px;min-width: 294px;">
+        <td style="max-width: 264px;min-width: 264px;">
           <select class="chosen-select" name="filter_priority">
           <option value="">{$control->option_strings.any}</option>
           {html_options options=$gsmarty_option_importance
@@ -372,7 +372,7 @@
     {if $control->filters.filter_execution_type}
       <tr>
         <td>{$labels.execution_type}</td>
-          <td style="max-width: 294px;min-width: 294px;">
+          <td style="max-width: 264px;min-width: 264px;">
         <select class="chosen-select" name="filter_execution_type">
           {html_options options=$control->filters.filter_execution_type.items
                         selected=$control->filters.filter_execution_type.selected}
@@ -384,7 +384,7 @@
     {if $control->filters.filter_assigned_user}
     <tr>
       <td>{$labels.filter_owner}<img src="{$tlImages.info_small}" title="{$labels.tester_works_with_settings}"></td>
-      <td style="max-width: 294px;min-width: 294px;">
+      <td style="max-width: 264px;min-width: 264px;">
 
       {if $control->advanced_filter_mode}
         <select class="chosen-select" name="filter_assigned_user[]"
@@ -451,7 +451,7 @@
 
         <tr>
         <td>{$labels.filter_result}</td>
-        <td style="max-width: 294px;min-width: 294px;">
+        <td style="max-width: 264px;min-width: 264px;">
         <select class="chosen-select" id="filter_result_result" 
         {if $control->advanced_filter_mode}
               name="filter_result_result[]" multiple="multiple"
@@ -467,7 +467,7 @@
 
       <tr>
         <td>{$labels.filter_on}</td>
-        <td style="max-width: 294px;min-width: 294px;">
+        <td style="max-width: 264px;min-width: 264px;">
             <select class="chosen-select" name="filter_result_method" id="filter_result_method"
                     onchange="javascript: triggerBuildChooser('filter_result_build_row',
                                                             'filter_result_method',
@@ -480,7 +480,7 @@
 
       <tr id="filter_result_build_row">
         <td>{$labels.build}</td>
-        <td style="max-width: 294px;min-width: 294px;"><select class="chosen-select" id="filter_result_build" name="filter_result_build">
+        <td style="max-width: 264px;min-width: 264px;"><select class="chosen-select" id="filter_result_build" name="filter_result_build">
           {html_options options=$control->filters.filter_result.filter_result_build.items
                         selected=$control->filters.filter_result.filter_result_build.selected}
           </select>
@@ -608,7 +608,7 @@
   {if $control->filters.filter_status}
     <tr>
       <td>{$labels.status}</td>
-      <td style="max-width: 294px;min-width: 294px;">
+      <td style="max-width: 264px;min-width: 264px;">
          <select class="chosen-select" id="filter_status"
         {if $control->advanced_filter_mode}
                   name="filter_status[]"
@@ -628,7 +628,7 @@
   {if $control->filters.filter_type}
     <tr>
       <td>{$labels.req_type}</td>
-      <td style="max-width: 294px;min-width: 294px;">
+      <td style="max-width: 264px;min-width: 264px;">
         <select class="chosen-select" id="filter_type" 
         {if $control->advanced_filter_mode}
                   name="filter_type[]"
@@ -647,7 +647,7 @@
   {if $control->filters.filter_spec_type}
     <tr>
       <td>{$labels.req_spec_type}</td>
-      <td style="max-width: 294px;min-width: 294px;">
+      <td style="max-width: 264px;min-width: 264px;">
         <select class="chosen-select" id="filter_spec_type" 
         {if $control->advanced_filter_mode}
                   name="filter_spec_type[]"
@@ -677,7 +677,7 @@
   {if $control->filters.filter_relation}
     <tr>
       <td>{$labels.has_relation_type}</td>
-      <td style="max-width: 294px;min-width: 294px;">
+      <td style="max-width: 264px;min-width: 264px;">
         <select class="chosen-select" id="filter_relation"
         {if $control->advanced_filter_mode}
                   name="filter_relation[]"
@@ -770,7 +770,7 @@
 <script>
 /* Chosen Config */
 jQuery( document ).ready(function() {
-jQuery(".chosen-select").chosen({ width: "85%" , allow_single_deselect: true, search_contains: true});
-jQuery('select[data-cfield="list"]').chosen({ width: "85%" , allow_single_deselect: true, search_contains: true});
+jQuery(".chosen-select").chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
+jQuery('select[data-cfield="list"]').chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
 });
 </script>
