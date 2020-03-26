@@ -477,7 +477,7 @@ viewer for test case in test specification
 </div>
   
 <p>
-<div {$addInfoDivStyle}>
+<div {$addInfoDivStyle} class="additionalInfoViewer">
    {$kwRW = $args_frozen_version=="no" && $edit_enabled == 1 &&
             $has_been_executed == 0} 
    
@@ -512,7 +512,7 @@ viewer for test case in test specification
        $has_been_executed == 1 && $args_tcase_cfg->can_edit_executed == 0}
        {$reqLinkingEnabled = 0}
   {/if}
-  <div {$addInfoDivStyle}>
+  <div {$addInfoDivStyle} class="additionalInfoViewer">
     <table cellpadding="0" cellspacing="0" style="font-size:100%;">
       <tr>
         <td colspan="{$tableColspan}" style="vertical-align:text-top;"><span><a title="{$tcView_viewer_labels.requirement_spec}" href="{$hrefReqSpecMgmt}"

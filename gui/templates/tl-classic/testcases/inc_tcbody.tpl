@@ -65,7 +65,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
       <br>
     {/if}
     <div class="labelHolder">{$inc_tcbody_labels.summary}</div>
-    <div class="tcContentHolder">{if $inc_tcbody_editor_type == 'none'}{$tco.summary|nl2br}{else}{$tco.summary}{/if}</div>
+    <div class="additionalInfoViewer">{if $inc_tcbody_editor_type == 'none'}{$tco.summary|nl2br}{else}{$tco.summary}{/if}</div>
 
     {if $inc_tcbody_cf.after_summary neq ''}
       <br>
@@ -74,10 +74,6 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
         {$inc_tcbody_cf.after_summary}
       </div>
     {/if}
-  </div>
-
-  <div class="spaceOne">
-      <hr style="margin:margin: 2px 0 2px 0">
   </div>
 
   <div class="preconditionsCONTAINER">
@@ -89,7 +85,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
       <br>
     {/if}
     <div class="labelHolder">{$inc_tcbody_labels.preconditions}</div>
-    <div>{if $inc_tcbody_editor_type == 'none'}{$tco.preconditions|nl2br}{else}{$tco.preconditions}{/if}</div>
+    <div class="additionalInfoViewer">{if $inc_tcbody_editor_type == 'none'}{$tco.preconditions|nl2br}{else}{$tco.preconditions}{/if}</div>
     {if $inc_tcbody_cf.after_summary neq ''}
       <br>
       <div id="cf_after_preconditions"
@@ -108,4 +104,3 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
   {/if}
 
 </div>
-<hr style="margin: 2px 10px 2px 10px;">
