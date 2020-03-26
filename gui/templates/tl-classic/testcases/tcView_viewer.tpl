@@ -577,7 +577,6 @@ viewer for test case in test specification
 {/if}
   
 {if $show_relations}
-  <br />
   {include file="{$tplConfig['relations.inc']}"
            args_is_latest_tcv = $args_testcase.isTheLatest
            args_relations = $args_relations

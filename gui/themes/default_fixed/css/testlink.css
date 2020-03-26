@@ -21,14 +21,12 @@ body {
     height: 100%;
 }
 
-body.testlink {
-    background-color: white !important;
-    font-family: 	'Trebuchet MS', Arial, Verdana, sans-serif;
-    font-size: 		small;
-    margin:			0px;
+body.cke_editable {
+    cursor: text;
     padding: 10px;
     height: calc(100% - 20px);
     width: calc(100% - 20px);
+    line-height: 1;
 }
 
 iframe {
