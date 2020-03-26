@@ -86,7 +86,7 @@
       {if $control->settings.setting_testplan}
         <tr>
           <td style="min-width: 85px">{$labels.test_plan}</td>
-          <td style="max-width: 294px;min-width: 294px;">
+          <td style="max-width: 303px;min-width: 303px;">
             <select class="chosen-select" name="setting_testplan" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_testplan.items
                           selected=$control->settings.setting_testplan.selected}
@@ -99,7 +99,7 @@
         {$platformID=$control->settings.setting_platform.selected}
         <tr>
           <td>{$labels.platform}</td>
-          <td style="max-width: 294px;min-width: 294px;">
+          <td style="max-width: 303px;min-width: 303px;">
             <select name="setting_platform" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_platform.items
                           selected=$control->settings.setting_platform.selected}
@@ -111,7 +111,7 @@
       {if $control->settings.setting_build}
         <tr>
           <td>{$control->settings.setting_build.label}</td>
-          <td style="max-width: 294px;min-width: 294px;">
+          <td style="max-width: 303px;min-width: 303px;">
             <select name="setting_build" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_build.items
                           selected=$control->settings.setting_build.selected}
@@ -123,7 +123,7 @@
       {if $control->settings.setting_testsgroupby}
         <tr>
           <td>{$labels.test_grouped_by}</td>
-          <td style="max-width: 294px;min-width: 294px;">
+          <td style="max-width: 303px;min-width: 303px;">
             <select name="setting_testsgroupby" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_testsgroupby.items
                     selected=$control->settings.setting_testsgroupby.selected}
@@ -178,7 +178,7 @@
           <td>
                 {$labels.exec_tree_counters_logic}
           </td>
-              <td style="max-width: 294px;min-width: 294px;">
+              <td style="max-width: 303px;min-width: 303px;">
                 <select class="chosen-select" name="setting_exec_tree_counters_logic" onchange="this.form.submit()">
                   {html_options
                   options=$control->settings.setting_exec_tree_counters_logic.items
@@ -770,7 +770,7 @@
 <script>
 /* Chosen Config */
 jQuery( document ).ready(function() {
-jQuery(".chosen-select").chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
-jQuery('select[data-cfield="list"]').chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
+jQuery(".chosen-select").chosen({ width: "85%" , allow_single_deselect: true, search_contains: true});
+jQuery('select[data-cfield="list"]').chosen({ width: "85%" , allow_single_deselect: true, search_contains: true});
 });
 </script>
