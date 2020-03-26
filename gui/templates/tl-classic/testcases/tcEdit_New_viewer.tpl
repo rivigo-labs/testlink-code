@@ -63,7 +63,7 @@ Purpose: smarty template - create new testcase
         {/if}
 
         <div class="labelHolder">{$labels.summary}</div>
-        <div>{$summary}</div>
+        <div style="margin-top: 5px;">{$summary}</div>
 
         {if $gui->cf.after_summary neq ""}
           <div id="cf_after_summary"
@@ -96,7 +96,6 @@ Purpose: smarty template - create new testcase
 
 
     {* Custom fields - with before steps & results location *}
-    <br />
     {if $gui->cf.before_steps_results neq ""}
          <br/>
          <div id="cf_before_steps" 
@@ -117,8 +116,7 @@ Purpose: smarty template - create new testcase
     </div>
   {/if}
 
-  <br />
-  <div>
+  <div style="margin-top: 15px">
   {$kwView = $gsmarty_href_keywordsView|replace:'%s%':$gui->tproject_id}
   <a href={$kwView}>{$labels.tc_keywords}</a>
   {include file="opt_transfer.inc.tpl" option_transfer=$gui->opt_cfg}
