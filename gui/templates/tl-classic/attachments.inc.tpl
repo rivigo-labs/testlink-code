@@ -123,7 +123,7 @@ var warning_delete_attachment = "{lang_get s='warning_delete_attachment'}";
       {$upURL = $attach_uploadURL}
     {/if} 
  
-    <div  style="text-align:left;margin:3px;background:#CDE;padding: 3px 3px 3px 3px;border-style: groove;border-width: thin;">
+    <div  style="text-align:left;margin:3px;background:#CDE;padding: 5px;border:thin solid #99bbe8">
       <form action="{$upURL}" method="post" enctype="multipart/form-data" 
             id="aForm" onsubmit="javascript:return checkFileSize();">
 

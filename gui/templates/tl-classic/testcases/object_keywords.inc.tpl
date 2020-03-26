@@ -77,11 +77,6 @@ var pF_remove_keyword = remove_keyword;
       </td>      
     </tr>
     <tr>
-      <td>
-       &nbsp;
-      </td> 
-    </tr>
-    <tr>
       {if $args_edit_enabled && null != $gui->freeKeywords} 
       <td>
        &nbsp;

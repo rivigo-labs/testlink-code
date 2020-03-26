@@ -74,6 +74,8 @@ ul.nav.nav-tabs.padding-18{
 }
 .x-tree-node{
 	font-size:13px!important;
+}
+.x-panel-body{
 	padding: 5px 0px 10px 0;
 }
 /** 
@@ -556,6 +558,7 @@ table.simple, table.simple_tableruler {
 	font-size:		90%;
 	margin:			5px;
 	width:			99%;
+	border-collapse: separate;
 }
 
 table.simple caption, table.simple_tableruler caption{
