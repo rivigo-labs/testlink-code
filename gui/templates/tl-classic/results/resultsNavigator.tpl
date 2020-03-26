@@ -43,7 +43,7 @@ function pre_submit() {
 
   <div style="margin:3px" >
     <span style="padding-right: 10px">{$labels.test_plan} 
-    <select name="tplan_id" onchange="pre_submit();this.form.submit()">
+    <select name="tplan_id" onchange="pre_submit();this.form.submit()" style="max-width: 83%">
       {html_options options=$gui->tplans selected=$gui->tplan_id}
     </select>
     </span>
