@@ -196,7 +196,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
   			 </div>
 		  {/if}
 
-		  <table cellspacing="0" cellpadding="2" class="exec_history">
+		  <table cellspacing="0" class="exec_history">
 			 <tr>
 				<th style="text-align:left">{$labels.date_time_run}</th>
         
