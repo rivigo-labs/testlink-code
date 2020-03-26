@@ -13,7 +13,7 @@ CKEDITOR.editorConfig = function( config )
 	// choose your prefered ckedtior skin
 	// available skins for version 4.x: moono-lisa => default
 	// For skins present on version 3.x => http://ckeditor.com/addons/skins/all
-	config.skin = 'moono-lisa';
+	config.skin = 'moonocolor';
 	
 	// set css of ckeditor content to testlink.css
 	config.contentsCss = fRoot + '/gui/themes/default/css/testlink.css';

@@ -458,8 +458,7 @@ viewer for test case in test specification
   </div>
 {/if}
 
-<p>
-<div {$addInfoDivStyle}>
+<div {$addInfoDivStyle} class="additionalInfoViewer">
    {$kwRW = $args_frozen_version=="no" && $edit_enabled == 1 &&
             $has_been_executed == 0} 
    

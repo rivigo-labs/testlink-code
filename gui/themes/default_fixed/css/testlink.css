@@ -17,8 +17,9 @@ body, body.testlink {
 	font-family: 	'Trebuchet MS', Arial, Verdana, sans-serif;
 	font-size: 		small;
 	margin:			0px;
-	padding:		0px;
-	height:100%;
+    padding: 10px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
 }
 iframe {
  border:none;
@@ -556,7 +557,21 @@ table.common caption, table.smallGrey caption {
 }
 
 .mainAttrContainer > div {
-	padding: 5px 3px 4px 5px;
+	padding: 5px 10px 4px 10px;
+}
+
+.tcContentHolder > p {
+    margin: 0;
+}
+
+div.tcContentHolder {
+    padding: 0 5px 0 5px;
+}
+
+.additionalInfoViewer{
+    margin-top: 10px;
+    border: thin solid #99bbe8;
+    padding: 10px;
 }
 
 div.tcNameCONTAINER{
