@@ -117,7 +117,7 @@ function setComboIfCbx(oid,combo_id_prefix,oid4value)
 
   {* --------------------------------------------------------------------------------------------------------------- *}
   {* added z-index to avoid problems with scrolling when using EXT-JS *}
-  <div id="header-wrap" style="z-index:999;height:200px;"> <!-- header-wrap -->
+  <div id="header-wrap"> <!-- header-wrap -->
 	<h1 class="title">{$gui->main_descr|escape}</h1>
   {if $gui->has_tc}
     {include file="inc_update.tpl" result=$sqlResult refresh="yes"}
@@ -183,7 +183,6 @@ function setComboIfCbx(oid,combo_id_prefix,oid4value)
   {/if}
 	</div> <!-- header-wrap -->
 
-  <p>&nbsp;<p>&nbsp;<p>
   {if $gui->has_tc}
    <div class="workBack" id="tc_exec_assignment_cb">
     <input type="hidden" name="targetFeature" id="targetFeature" value="0"/>

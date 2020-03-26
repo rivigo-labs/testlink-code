@@ -93,7 +93,7 @@ function update2latest(id)
 
 {include file='inc_filter_panel.tpl'}
 {include file="inc_tree_control.tpl"}
-<div id="tree_div" style="overflow:auto; height:100%;border:1px solid #c3daf9;"></div>
+<div id="tree_div" style="overflow:auto; border:1px solid #c3daf9;"></div>
 
 <script type="text/javascript">
 {if $gui->src_workframe != ''}

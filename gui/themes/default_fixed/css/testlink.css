@@ -74,6 +74,7 @@ ul.nav.nav-tabs.padding-18{
 }
 .x-tree-node{
 	font-size:13px!important;
+	padding: 5px 0px 10px 0;
 }
 /** 
 use together with #header-wrap, to create a section on top of body
@@ -203,20 +204,21 @@ present on page (example grid())
 On chrome seems not work
 */
 #header-wrap {
-	border-bottom:	1px solid #000;
+	border: 1px solid #000;
 	height: 200px;
 	position: fixed;
 	top:  0;
-	width:  100%;
+	width: 99.80%;
+	background-color: #f0f8ff;
 	z-index:  999;
 }
 
 /* background for working area (tables and forms) */
 div.workBack {
 	text-align: 	left;
-	margin: 		3px 0 3px 0;
+	margin: 		5px 0 3px 0;
 	background: 	#CDE;
-	padding: 		3px 3px 20px 3px;
+	padding: 		5px 5px 20px 5px;
 	border-style:	groove;
 	border-width:	thin;
 }

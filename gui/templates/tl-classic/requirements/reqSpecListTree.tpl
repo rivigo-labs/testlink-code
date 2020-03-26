@@ -72,6 +72,6 @@ var req_manager_url = '{$gui->req_manager_url}';
 
 {include file="inc_tree_control.tpl"}
 
-<div id="tree_div" style="overflow:auto; height:100%;border:1px solid #c3daf9;"></div>
+<div id="tree_div" style="overflow:auto; border:1px solid #c3daf9;"></div>
 </body>
 </html>
