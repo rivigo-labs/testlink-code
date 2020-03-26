@@ -233,7 +233,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 
        <th style="text-align:left">{$labels.run_mode}</th>
 
-       <th style="text-align:left">&nbsp;</th>
+       <th style="text-align:left;border-right: 1px solid black;">&nbsp;</th>
 
        {$my_colspan=$my_colspan+3}
   		 </tr>
@@ -243,7 +243,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
   	     {$tc_status_code=$tc_old_exec.status}
 			{cycle values='#eeeeee,#d0d0d0' assign="bg_color"}
 			<tr style="border-top:1px solid black; background-color: {$bg_color}">
-  			  <td>
+  			  <td style="padding: 5px">
           {* Check also that Build is Open *}
   			  {if $can_edit_exec_notes && $tc_old_exec.build_is_open}
   		      <img src="{$tlImages.note_edit}" style="vertical-align:middle" 
@@ -361,7 +361,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 
           {* CORTADO *}
           {if $tlCfg->exec_cfg->steps_exec }
-            <td class="icon_cell" align="center">
+            <td class="icon_cell" align="center" style="padding-right: 5px;border-right: 1px solid black;">
               <img src="{$tlImages.steps}" title="{$labels.access_test_steps_exec}"  
                    onclick="javascript:openPrintPreview('exec',
                    {$tc_old_exec.execution_id},

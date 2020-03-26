@@ -32,7 +32,7 @@ Author : franciscom
     											onclick="javascript:set_combo_group('execSetResults','status_','{$ResultsStatusCode.$verbose_status}');"
     							    {if $verbose_status eq $tlCfg->results.default_status}
     							        checked="checked" 
-    							    {/if} /> &nbsp;{lang_get s=$locale_status}<br />
+    							    {/if} /> &nbsp;{lang_get s=$locale_status}
     					  {/foreach}
               {else}
                 {$args_labels.test_exec_result}&nbsp;

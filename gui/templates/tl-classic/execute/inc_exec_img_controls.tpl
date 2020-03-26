@@ -42,7 +42,7 @@ Author : franciscom
       											onclick="javascript:set_combo_group('execSetResults','status_','{$ResultsStatusCode.$verbose_status}');"
       							    {if $verbose_status eq $tlCfg->results.default_status}
       							        checked="checked" 
-      							    {/if} /> &nbsp;{lang_get s=$locale_status}<br />
+      							    {/if} /> &nbsp;{lang_get s=$locale_status}
       					  {/foreach}
                 {/if}
 
@@ -56,8 +56,7 @@ Author : franciscom
                          maxlength="{#EXEC_DURATION_MAXLEN#}">  
                   {/if}       		 			
                 {if $args_save_type == 'single'}
-                  <br />
-                  <br />
+
                   {$addBR=0}
                   {if $tc_exec.assigned_user == ''}
                    <img src="{$tlImages.assign_task}" 
