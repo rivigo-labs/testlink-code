@@ -58,13 +58,13 @@ Author : franciscom
  
   <div class="workBack">
     <table class="simple">
-      {if $cfdt.before_steps_results != ''}
+      {if $cfdt.before_steps_results neq ''}
         <tr>
           <td colspan="{$tableColspan}"> {$cfdt.before_steps_results}</td>
         </tr>
       {/if}
 
-      {if $args_tc_exec.steps != '' && !is_null($args_tc_exec.steps)}
+      {if $args_tc_exec.steps neq '' && !is_null($args_tc_exec.steps)}
         <tr>
           <td>
             {include file="testcases/inc_steps.tpl"
