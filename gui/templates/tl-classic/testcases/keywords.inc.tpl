@@ -76,9 +76,9 @@ var pF_remove_keyword = remove_keyword;
   {$kwAL = 
   "lib/keywords/keywordsEdit.php?doAction=cfl&tproject_id=%s%&directAccess=1&tcversion_id=$args_tcversion_id"|replace:'%s%':$gui->tproject_id}
 
-  <table cellpadding="0" cellspacing="0" style="font-size:100%;" width="30%">
+  <table cellpadding="0" cellspacing="0" style="font-size:100%;">
     <tr>
-      <td width="35%" style="vertical-align:top;">
+      <td style="vertical-align: top;width: 150px;">
     <a href="javascript:open_popup('{$kwView}')">{$tcView_viewer_labels.keywords}</a> &nbsp; 
 
       <a href="javascript:open_popup('{$kwAdd}')">
@@ -93,7 +93,7 @@ var pF_remove_keyword = remove_keyword;
       {$removeEnabled = $args_edit_enabled && $gui->assign_keywords &&
                         $args_frozen_version == "no"}
 
-      <td style="vertical-align:top;">
+      <td style="vertical-align:top;width: calc(100% - 150px);padding-bottom: 5px;">
           {foreach item=tckw_link_item from=$args_keywords_map}
                 {$tckw_link_item.keyword|escape}
             {if $removeEnabled}
@@ -102,9 +102,9 @@ var pF_remove_keyword = remove_keyword;
                      '{$tckw_link_item.keyword|escape:'javascript'}', 
                      remove_kw_msgbox_title, remove_kw_msgbox_msg, 
                      pF_remove_keyword);">
-           <img src="{$tlImages.delete}" title="{$kw_labels.img_title_remove_keyword}"  style="border:none" /></a>
+           <img src="{$tlImages.delete}" title="{$kw_labels.img_title_remove_keyword}"  style="border:none;margin-right: 10px;" /></a>
            {/if}
-            <br />
+
                 {foreachelse}
                   {$tcView_viewer_labels.none}
             {/foreach}

@@ -22,10 +22,10 @@ Purpose: smarty template - create new testcase
   {$layout3="</td></tr></table><br />"}
 {/if}
 {* ----------------------------------------------------------- *}
-  <p />
-  <div class="labelHolder"><label for="testcase_name">{$labels.tc_title}</label></div>
+
+  <div class="labelHolder tcNameCONTAINER"><label for="testcase_name">{$labels.tc_title}</label></div>
   <div> 
-    <input type="text" name="testcase_name" id="testcase_name"
+    <input class="tcNameCONTAINER" type="text" name="testcase_name" id="testcase_name"
       size="{#TESTCASE_NAME_SIZE#}" required 
       maxlength="{#TESTCASE_NAME_MAXLEN#}"
       onchange="content_modified = true"
@@ -49,13 +49,11 @@ Purpose: smarty template - create new testcase
           {$gui->cf.after_title}
         </div>
       </div>
-        
+      <br />
     {/if}
-
-    <br />
  
     <div id="mainAttrContainer" class="mainAttrContainer"> 
-      <div id="summaryCONTAINER">
+      <div id="summaryCONTAINER" class="tcNameCONTAINER">
         {if $gui->cf.before_summary neq ""}
           <div id="cf_before_summary"
                class="custom_field_container">
@@ -65,7 +63,7 @@ Purpose: smarty template - create new testcase
         {/if}
 
         <div class="labelHolder">{$labels.summary}</div>
-        <div>{$summary}</div>
+        <div style="margin-top: 5px;">{$summary}</div>
 
         {if $gui->cf.after_summary neq ""}
           <div id="cf_after_summary"
@@ -75,8 +73,8 @@ Purpose: smarty template - create new testcase
         {/if}
 
       </div>
-      <div id="spaceOne" style="margin-top:35px;"></div>
-      <div id="preconditionsCONTAINER">
+
+      <div id="preconditionsCONTAINER" class="tcNameCONTAINER">
         {if $gui->cf.before_preconditions neq ""}
           <div id="cf_before_preconditions"
                class="custom_field_container">
@@ -86,7 +84,7 @@ Purpose: smarty template - create new testcase
         {/if}
 
         <div class="labelHolder">{$labels.preconditions}</div>
-        <div>{$preconditions}</div>
+        <div style="margin-top: 5px;">{$preconditions}</div>
         {if $gui->cf.after_preconditions neq ""}
           <div id="cf_after_preconditions"
                class="custom_field_container">
@@ -98,7 +96,6 @@ Purpose: smarty template - create new testcase
 
 
     {* Custom fields - with before steps & results location *}
-    <br />
     {if $gui->cf.before_steps_results neq ""}
          <br/>
          <div id="cf_before_steps" 
@@ -119,8 +116,7 @@ Purpose: smarty template - create new testcase
     </div>
   {/if}
 
-  <br />
-  <div>
+  <div style="margin-top: 15px">
   {$kwView = $gsmarty_href_keywordsView|replace:'%s%':$gui->tproject_id}
   <a href={$kwView}>{$labels.tc_keywords}</a>
   {include file="opt_transfer.inc.tpl" option_transfer=$gui->opt_cfg}

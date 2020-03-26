@@ -90,9 +90,6 @@ Author : franciscom
         <tr>
       {/if}
 
-      <tr> <td colspan="{$tableColspan}"> &nbsp; </td></tr>
-      <tr> <td colspan="{$tableColspan}"> &nbsp; </td></tr>
-
       {if $args_relations != '' && !is_null($args_relations)}
         <tr>
           <td colspan="{$tableColspan}">
@@ -102,17 +99,19 @@ Author : franciscom
         </tr>
       {/if}
 
-      <tr>
-        <td colspan="{$tableColspan}">
+
           {if $args_design_time_cf[$testcase_id].standard_location != ''}
+        <tr>
+            <td colspan="{$tableColspan}">
               <div id="cfields_design_time_tcversionid_{$tcversion_id}" class="custom_field_container" 
               style="background-color:#dddddd;">{$args_design_time_cf[$testcase_id].standard_location}
               </div>
+            </td>
+        </tr>
           {/if} 
-        </td>
-      </tr>
+
    
-      <tr>
+
         {* ------------------------------------------------------ *}
         {if $args_enable_custom_field and $args_tc_exec.active == 1}
           {if isset($args_execution_time_cf[$testcase_id]) && $args_execution_time_cf[$testcase_id] != ''}
@@ -126,27 +125,31 @@ Author : franciscom
           {/if}
         {/if} {* if $args_enable_custom_field *}
         {* ------------------------------------------------------ *}
-      
-        <td colspan="{$tableColspan}">
+
           {if $args_testplan_design_time_cf[$testcase_id] != ''}
+        <tr>
+            <td colspan="{$tableColspan}">
               <div id="cfields_testplan_design_time_tcversionid_{$tcversion_id}" class="custom_field_container" 
               style="background-color:#dddddd;">{$args_testplan_design_time_cf[$testcase_id]}
               </div>
+            </td>
+        </tr>
           {/if} 
-        </td>
-      </tr>
+
       
-      <tr>
-        <td colspan="{$tableColspan}">
+
         {if $args_tcAttachments[$testcase_id] neq null}
+        <tr>
+            <td colspan="{$tableColspan}">
           {include file="attachments.inc.tpl" 
                    attach_downloadOnly=true 
                    attach_attachmentInfos=$args_tcAttachments[$testcase_id] 
                    attach_tableClassName="bordered"
                    attach_tableStyles="background-color:#dddddd;width:100%"}
+            </td>
+        </tr>
         {/if}
-        </td>
-      </tr>
+
 
       {* TestScript Links (if any) *}
       {if isset($gui->scripts[$tcversion_id]) && !is_null($gui->scripts[$tcversion_id])}

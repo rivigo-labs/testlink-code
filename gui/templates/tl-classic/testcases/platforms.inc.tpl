@@ -68,16 +68,16 @@ var pF_remove_platform = remove_platform;
   {$itemView =
     $gsmarty_href_platformsView|replace:'%s%':$gui->tproject_id}
 
-  <table cellpadding="0" cellspacing="0" style="font-size:100%;">
+  <table cellpadding="0" cellspacing="0" style="font-size:100%;vertical-align:top;width: calc(100% - 150px);padding-bottom: 5px;">
     <tr>
-      <td width="35%" style="vertical-align:top;"><a href={$itemView}>{$plat_labels.title_platforms}</a>: &nbsp;
+      <td style="vertical-align: top;width: 80px;"><a href={$itemView}>{$plat_labels.title_platforms}</a>: &nbsp;
       </td>
 
       {* $gui->assign_platforms && *}
       {$removeEnabled = $args_edit_enabled && 
                         $args_frozen_version == "no"}
 
-      <td style="vertical-align:top;">
+      <td style="vertical-align:top;width: calc(100% - 150px);padding-bottom: 5px;">
           {foreach item=tcplat_link_item from=$args_platforms_map}
                 {$tcplat_link_item.name|escape}
             {if $removeEnabled}
@@ -86,9 +86,9 @@ var pF_remove_platform = remove_platform;
                      '{$tcplat_link_item.name|escape:'javascript'}', 
                      remove_plat_msgbox_title, remove_plat_msgbox_msg, 
                      pF_remove_platform);">
-           <img src="{$tlImages.delete}" title="{$plat_labels.img_title_remove_platform}"  style="border:none" /></a>
+           <img src="{$tlImages.delete}" title="{$plat_labels.img_title_remove_platform}"  style="border:none;margin-right: 10px;" /></a>
            {/if}
-            <br />
+
                 {foreachelse}
                   {$tcView_viewer_labels.none}
             {/foreach}

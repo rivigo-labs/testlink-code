@@ -55,11 +55,11 @@ var pF_remove_keyword = remove_keyword;
 
   {$kwView = $gsmarty_href_keywordsView|replace:'%s%':$gui->tproject_id}
 
-  <table cellpadding="0" cellspacing="0" style="font-size:100%;">
+  <table cellpadding="0" cellspacing="0" style="font-size:100%;width: 100%; margin-top: 0" class="additionalInfoViewer">
     <tr>
-      <td width="15%" style="vertical-align:top;"><a href={$kwView}>{$kw_labels.keywords}</a>: &nbsp;
+      <td style="vertical-align:top;width: 150px;"><a href={$kwView}>{$kw_labels.keywords}</a>: &nbsp;
       </td>
-      <td style="vertical-align:top;">
+      <td style="vertical-align:top;width: calc(100% - 150px);padding-bottom: 5px;">
           {foreach item=kw_link_item from=$args_keywords_map}
                 {$kw_link_item.keyword|escape}
             {if $args_edit_enabled && $gui->assign_keywords }
@@ -70,16 +70,10 @@ var pF_remove_keyword = remove_keyword;
                      pF_remove_keyword);">
            <img src="{$tlImages.delete}" title="{$kw_labels.img_title_remove_keyword}"  style="border:none" /></a>
            {/if}
-            <br />
                 {foreachelse}
                   {$kw_labels.none}
             {/foreach}
       </td>      
-    </tr>
-    <tr>
-      <td>
-       &nbsp;
-      </td> 
     </tr>
     <tr>
       {if $args_edit_enabled && null != $gui->freeKeywords} 

@@ -17,9 +17,10 @@ body, body.testlink {
 	font-family: 	'Trebuchet MS', Arial, Verdana, sans-serif;
 	font-size: 		small;
 	margin:			0px;
-	padding:		0px;
-	height:100%;
+    padding: 0px;
+    height: 100%;
 }
+
 iframe {
  border:none;
 }
@@ -74,6 +75,9 @@ ul.nav.nav-tabs.padding-18{
 }
 .x-tree-node{
 	font-size:13px!important;
+}
+.x-panel-body{
+	padding: 5px 0px 10px 0;
 }
 /** 
 use together with #header-wrap, to create a section on top of body
@@ -203,20 +207,21 @@ present on page (example grid())
 On chrome seems not work
 */
 #header-wrap {
-	border-bottom:	1px solid #000;
+	border: 1px solid #000;
 	height: 200px;
 	position: fixed;
 	top:  0;
-	width:  100%;
+	width: 99.80%;
+	background-color: #f0f8ff;
 	z-index:  999;
 }
 
 /* background for working area (tables and forms) */
 div.workBack {
 	text-align: 	left;
-	margin: 		3px 0 3px 0;
+	margin: 		5px 0 3px 0;
 	background: 	#CDE;
-	padding: 		3px 3px 20px 3px;
+	padding: 		5px 5px 20px 5px;
 	border-style:	groove;
 	border-width:	thin;
 }
@@ -546,6 +551,32 @@ table.common caption, table.smallGrey caption {
 	border-bottom-style: none;
 	font-weight:    bold;
 }
+.mainAttrContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.mainAttrContainer > div {
+	padding: 5px 10px 4px 10px;
+}
+
+.additionalInfoViewer > p {
+    margin: 0;
+}
+
+.additionalInfoViewer {
+    margin-top: 10px;
+    border: thin solid #99bbe8;
+}
+
+div.tcNameCONTAINER{
+	margin-top: 10px;
+	padding: 5px 3px 4px 5px;
+}
+
+input.tcNameCONTAINER{
+	margin-left: 5px;
+}
 
 
 /* ***** Simple Table (often used to show data) ***************** */
@@ -554,6 +585,7 @@ table.simple, table.simple_tableruler {
 	font-size:		90%;
 	margin:			5px;
 	width:			99%;
+	border-collapse: separate;
 }
 
 table.simple caption, table.simple_tableruler caption{
@@ -940,6 +972,7 @@ div.login_form.medium {
 .option_transfer_container {
   border: thin solid white;
   padding: 5px;
+  margin-top: 5px;
 }
 
 
