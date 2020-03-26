@@ -20,6 +20,7 @@ CKEDITOR.editorConfig = function( config )
 	
 	// do not check "Replace actual contents" checkbox as default
 	config.templates_replaceContent = false;
+	config.extraPlugins = 'wysiwygarea';
 	
 	// default Toolbar
 	config.toolbar_Testlink = 
