@@ -181,7 +181,7 @@
                 {$labels.exec_tree_counters_logic}
               </span>
               <span>
-                <select class="chosen-select" name="setting_exec_tree_counters_logic" id="build_to_execute_id" onchange="this.form.submit()">
+                <select class="chosen-select" name="setting_exec_tree_counters_logic" onchange="this.form.submit()">
                   {html_options
                   options=$control->settings.setting_exec_tree_counters_logic.items
                   selected=$control->settings.setting_exec_tree_counters_logic.selected}
@@ -774,7 +774,7 @@
 <script>
 /* Chosen Config */
 jQuery( document ).ready(function() {
-jQuery(".chosen-select").chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
-jQuery('select[data-cfield="list"]').chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
+jQuery(".chosen-select").chosen({ width: "85%" , allow_single_deselect: true, search_contains: true});
+jQuery('select[data-cfield="list"]').chosen({ width: "85%" , allow_single_deselect: true, search_contains: true});
 });
 </script>
