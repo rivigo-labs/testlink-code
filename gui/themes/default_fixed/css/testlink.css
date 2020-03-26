@@ -550,6 +550,28 @@ table.common caption, table.smallGrey caption {
 	border-bottom-style: none;
 	font-weight:    bold;
 }
+.mainAttrContainer {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+.mainAttrContainer > div {
+	padding: 5px 3px 4px 5px;
+}
+
+.tcCreateCONTAINER{
+	margin-top: 10px;
+	padding: 5px 3px 4px 5px;
+}
+
+div.tcNameCONTAINER{
+	padding: 5px 3px 4px 5px;
+}
+
+input.tcNameCONTAINER{
+	margin-left: 5px;
+}
 
 
 /* ***** Simple Table (often used to show data) ***************** */
