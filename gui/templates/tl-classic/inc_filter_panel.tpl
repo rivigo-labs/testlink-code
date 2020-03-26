@@ -78,10 +78,10 @@
       {$labels.caption_nav_settings}
     </div>
 
-    <div id="settings" class="x-panel-body" style="padding-top: 3px;overflow: visible;">
+    <div id="settings" class="x-panel-body exec_additional_info" style="padding-top: 3px;overflow: visible;">
       <input type='hidden' id="tpn_view_settings" name="tpn_view_status"  value="0" />
 
-      <table class="smallGrey" style="width:96%;overflow: visible;margin: 0 10px 10px 10px;padding: 4px">
+      <table class="smallGrey" style="width:98%;">
 
       {if $control->settings.setting_testplan}
         <tr>
@@ -135,7 +135,7 @@
       {if $control->settings.setting_refresh_tree_on_action}
         <tr>
             <td colspan="2">
-                <div style="margin-top: 4px;">
+                <div>
                     <span style="margin-right: 2px;vertical-align: middle;">
                         {$labels.do_auto_update}
                     </span>
@@ -181,7 +181,7 @@
                 {$labels.exec_tree_counters_logic}
               </span>
               <span>
-                <select class="chosen-select" name="setting_exec_tree_counters_logic" onchange="this.form.submit()">
+                <select class="chosen-select" name="setting_exec_tree_counters_logic" id="build_to_execute_id" onchange="this.form.submit()">
                   {html_options
                   options=$control->settings.setting_exec_tree_counters_logic.items
                   selected=$control->settings.setting_exec_tree_counters_logic.selected}
@@ -774,8 +774,7 @@
 <script>
 /* Chosen Config */
 jQuery( document ).ready(function() {
-jQuery(".chosen-select").chosen({ width: "75%" , allow_single_deselect: true, search_contains: true});
-jQuery("select[name='setting_exec_tree_counters_logic']").chosen({ width: "47%" , allow_single_deselect: true, search_contains: true});
-jQuery('select[data-cfield="list"]').chosen({ width: "75%" , allow_single_deselect: true, search_contains: true});
+jQuery(".chosen-select").chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
+jQuery('select[data-cfield="list"]').chosen({ width: "98%" , allow_single_deselect: true, search_contains: true});
 });
 </script>
