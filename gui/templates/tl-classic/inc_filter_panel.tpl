@@ -85,7 +85,7 @@
 
       {if $control->settings.setting_testplan}
         <tr>
-          <td style="min-width: 85px">{$labels.test_plan}</td>
+          <td style="min-width: 50px">{$labels.test_plan}</td>
           <td style="max-width: 264px;min-width: 264px;">
             <select class="chosen-select" name="setting_testplan" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_testplan.items

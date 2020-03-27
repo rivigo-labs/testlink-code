@@ -80,7 +80,7 @@ Author : franciscom
           <td colspan="{$tableColspan}" style="text-align: center;"> 
           <br><b>{$args_labels.partialExecNoAttachmentsWarning}</b>
           </td>
-        <tr>
+        </tr>
         <tr>
           <td colspan="{$tableColspan}" style="text-align: center;"> 
            <br>
