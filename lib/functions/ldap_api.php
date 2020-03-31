@@ -258,6 +258,7 @@ function ldap_get_field_from_username($authCfg, $p_username, $p_field ) {
   $t_ldap_organization = $authCfg['ldap_organization'];
   $t_ldap_root_dn = $authCfg['ldap_root_dn'];
   $t_ldap_uid_field = $authCfg['ldap_uid_field']; // 'uid' by default
+  $t_custom_search_filter = $authCfg['ldap_search_filters'];
 
   $c_username = ldap_escape_string( $p_username );
 
@@ -270,7 +271,7 @@ function ldap_get_field_from_username($authCfg, $p_username, $p_field ) {
 
 
   # Search
-  $t_search_filter        = "(&$t_ldap_organization($t_ldap_uid_field=$c_username))";
+  $t_search_filter        = "(&$t_ldap_organization($t_ldap_uid_field=$c_username)$t_custom_search_filter)";
   $t_search_attrs         = array( $t_ldap_uid_field, $p_field, 'dn' );
 
   // log_event( LOG_LDAP, "Searching for $t_search_filter" );
