@@ -19,7 +19,7 @@ Author : franciscom
 
   {if $gui->grants->execute}
   	<table class="no-border" 
-        style="width:100%;border: thick solid white">
+        style="width:100%;">
     		<tr border='0'>
     			<td style="text-align: center;width:75%; border: 0px">
     				<div class="title">{$args_labels.test_exec_notes}</div>
@@ -27,7 +27,7 @@ Author : franciscom
           <br>  
           <!-- {include file="attachments_simple.inc.tpl" attach_id=0} -->
     			</td>
-    			<td valign="top" style="width:25%; border: 0px">			
+    			<td valign="top" style="width:20%; border: 0px">
       				{* status of test *}
         			<div class="title" style="text-align: center;">
               {if $args_save_type == 'bulk'} {$args_labels.test_exec_result} {else} &nbsp; {/if}
@@ -47,13 +47,13 @@ Author : franciscom
                 {/if}
 
                 {if $tlCfg->exec_cfg->features->exec_duration->enabled}	
-                  <br />	
+
                   <img src="{$tlImages.execution_duration}" 
-                         title="{$args_labels.execution_duration}">
+                         title="{$args_labels.execution_duration}" style="margin: 5px;">
                   <input type="text" name="execution_duration" id="execution_duration"
-                         size="{#EXEC_DURATION_SIZE#}" 
+                         size="12"
                          onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
-                         maxlength="{#EXEC_DURATION_MAXLEN#}">  
+                         maxlength="12">
                   {/if}       		 			
                 {if $args_save_type == 'single'}
 
@@ -107,7 +107,7 @@ Author : franciscom
                      {$in = $ikval.img}
                      <img src="{$tlImages.$in}" title="{$ikval.title}"
                           name="fastExec{$kode}[{$tcversion_id}]"
-                          id="fastExec{$kode}_{$tcversion_id}"
+                          id="fastExec{$kode}_{$tcversion_id}" style="margin: 5px 0 0 18px"
                           onclick="javascript:saveExecStatus({$tcvID},'{$kode}');">&nbsp;
                    {/foreach}  
                    <br />
@@ -119,7 +119,7 @@ Author : franciscom
                      {$in = $ikval.img}
                      <img src="{$tlImages.$in}" title="{$ikval.title}"
                           name="fastExecNext{$kode}[{$tcversion_id}]"
-                          id="fastExecNext{$kode}_{$tcversion_id}"
+                          id="fastExecNext{$kode}_{$tcversion_id}" style="margin: 5px 0 0 18px"
                           onclick="javascript:saveExecStatus({$tcvID},'{$kode}','',1);">&nbsp;
                    {/foreach}  
                    <br />
